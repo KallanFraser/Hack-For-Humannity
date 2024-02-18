@@ -23,5 +23,8 @@ StudyBuddy is a web development project created during the Hack for Humanity 202
 - **Backend:**
   - Node.js
 
+- **Application Framework:**
+  - Express.js
+
 - **Database:**
   - SQL
