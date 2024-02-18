@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Study Buddy</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/css/select2.min.css"/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/js/select2.min.js"></script>
+    <link rel="stylesheet" href="../cssFiles/myClasses.css">
+</head>
+<body>
+    <header>
+        <nav class="main-nav">
+            <ul>
+                <li><a href="/mainMenu">Home</a></li>
+                <li><a href="/myProfile">My Profile</a></li>
+                <li><a href="/myClasses">My Classes</a></li>
+                <li><a href="/myFriends">My Friends</a></li>
+                <li><a href="/login">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class = homePageImage></div>
+    
+    <!-- Users Classes Section -->
+    <div class = "parentOverlay">
+        <div class = "myClassesOverlay">
+            <div class="myClassesContainer">
+                <h2 class="myClasses">My Classes</h2>
+                <ul class="classList"></ul>
+            </div>
+        </div>
+
+        <div class = "addClassesOverlay">
+            <div class="addClassesContainer">
+                <h2 class="addClasses">Add Classes</h2>
+                <!--<ul class="classListAdd"></ul>-->
+                <select id="classListAdd" name="classListAdd">
+                    <!-- Options will be dynamically added here via the js script found in registerPage.js-->
+                </select>
+                <button id="submitClass">Add Class</button> <!-- Button to submit the selected class -->
+            </div>
+        </div>
+    </div>
+    <script src="../jsFiles/myClasses.js"></script> <!-- Links this HTML to the JavaScript file -->
+</body>
+</html>
+
+
+<!--Fetch most recent 15 Messages that are from different Users-->
+<!--For each Message, attach the users name and picture of their face-->

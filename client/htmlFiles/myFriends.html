@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Study Buddy</title>
+    <link rel="stylesheet" href="../cssFiles/base.css">
+    <link rel="stylesheet" href="../cssFiles/myFriends.css">
+</head>
+<body>
+    <header>
+        <nav class="main-nav">
+            <ul>
+                <li><a href="/mainMenu">Home</a></li>
+                <li><a href="/myProfile">My Profile</a></li>
+                <li><a href="/myClasses">My Classes</a></li>
+                <li><a href="/myFriends">My Friends</a></li>
+                <li><a href="/login">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class = homePageImage></div>
+
+    <div class = "containers">
+        <div class="acceptFriendRequestsColumn">
+            <div class="column">
+                <h3>Accept Friend Requests</h3>
+                <div class="friendRequestcontent">
+                    <!-- Content for accepting friend requests -->
+                </div>
+            </div>
+        </div>
+        <div class="myFriendsColumn">
+            <h3>My Friends</h3>
+            <div class="friendscontent">
+                <!-- Content for displaying friends -->
+            </div>
+        </div>
+        <div class="addFriendsColumn">
+            <h3>Add Friends</h3>
+            <div class="addFriendscontent">
+                <!-- Content for adding friends -->
+                <ul id="suggestedFriendsList">
+                    <!-- Suggested friends will be added here -->
+                </ul>
+            </div>
+        </div>
+    </div>
+    <script src="../jsFiles/myFriends.js"></script> <!-- Links this HTML to the JavaScript file -->
+</body>
+</html>

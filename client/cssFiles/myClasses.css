@@ -1,0 +1,259 @@
+body
+{
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f2;
+}
+
+header
+{
+    background-color: #c51f1f;
+    color: white;
+    padding: 17px 0;
+}
+
+.main-nav ul
+{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+
+.main-nav li
+{
+    display: inline-block;
+    margin: 0 20px;
+}
+
+.main-nav a
+{
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    font-weight: 550;
+}
+
+.main-nav a:hover
+{
+    color: #813f3f;
+}
+
+.homePageImage
+{
+    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgb(0, 0, 0)), url('../src/HomePageImage.png');
+    background-size: cover;
+    /* Covers the entire container */
+    background-position: center;
+    /* Centers the background image */
+    background-repeat: no-repeat;
+    /* Disables repeating the image */
+    height: 100vh;
+    /* Set the height of the div */
+    width: 100%;
+    /* Set the width of the div */
+    position: relative;
+    /* Needed for the pseudo-element positioning */
+}
+
+.parentOverlay
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    /* Adjusted to accommodate both sets */
+    height: 70%;
+    z-index: 11;
+}
+
+.myClassesOverlay
+{
+    width: 48%;
+    /* Adjusted to fit side by side */
+    height: 100%;
+    padding: 30px;
+    background-color: rgba(255, 255, 255, 0.75);
+    border-radius: 5px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    margin-right: 2%;
+    /* Space between the overlays */
+}
+
+.myClassesContainer
+{
+    height: 87%;
+    background-color: rgb(238, 201, 201, 0.5);
+    background-image: url('../src/PalmTreesLogin.png');
+    background-size: cover;
+    background-position: center;
+    padding: 40px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.myClasses
+{
+    margin-bottom: 40px;
+    /* Adjust as needed */
+    font-size: 24px;
+    /* Adjust as needed */
+    text-align: center;
+    color: #ffd2d2;
+    text-decoration: none;
+    font-size: 25px;
+    font-weight: 510;
+    text-shadow:
+        -1px -1px 0 #000,
+        1px -1px 0 #000,
+        -1px 1px 0 #000,
+        1px 1px 0 #000,
+        -2px 0 0 #000,
+        2px 0 0 #000,
+        0 -2px 0 #000,
+        0 2px 0 #000;
+    /* Thicker outline effect */
+}
+
+.classList
+{
+    list-style-type: none;
+    /* Removes default bullet points */
+    padding: 0;
+    /* Removes default padding */
+    margin: 0;
+    /* Removes default margin */
+}
+
+
+.classList li
+{
+    padding: 12px;
+    padding-inline: 50px;
+    /* Adds padding inside each list item */
+    margin-bottom: 15px;
+    /* Adds some space between list items */
+    border: 2px solid #8a1515;
+    /* Sets a solid border with a color */
+    border-radius: 5px;
+    /* Adds rounded corners to the border */
+    background-color: #f9f9f9;
+    /* Sets a background color for the list item */
+    font-size: 15px;
+    /* Adjust as needed */
+    font-weight: 580;
+    text-align: center;
+}
+
+.classList a
+{
+    font-size: 15px;
+    /* Adjust as needed */
+    font-weight: 580;
+    text-align: center;
+    color: #000000;
+    text-decoration: none;
+    padding: 20px;
+}
+
+.addClassesOverlay
+{
+    width: 48%;
+    /* Adjusted to fit side by side */
+    height: 100%;
+    padding: 30px;
+    background-color: rgba(255, 255, 255, 0.75);
+    border-radius: 5px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.addClassesContainer
+{
+    /* Similar styles to myClassesContainer */
+    height: 87%;
+    background-color: rgb(238, 201, 201, 0.5);
+    background-image: url('../src/PalmTreesLogin.png');
+    background-size: cover;
+    background-position: center;
+    padding: 40px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+
+.addClasses
+{
+    margin-bottom: 20px;
+    font-size: 24px;
+    text-align: center;
+    color: #ffd2d2;
+    text-decoration: none;
+    font-size: 25px;
+    font-weight: 510;
+    text-shadow:
+        -1px -1px 0 #000,
+        1px -1px 0 #000,
+        -1px 1px 0 #000,
+        1px 1px 0 #000,
+        -2px 0 0 #000,
+        2px 0 0 #000,
+        0 -2px 0 #000,
+        0 2px 0 #000;
+    /* Thicker outline effect */
+}
+
+
+#classListAdd
+{
+    width: 100%;
+    /* Makes the select element take up the full width of its container */
+    padding: 8px;
+    /* Adds padding inside the select box */
+    margin-bottom: 10px;
+    /* Adds some space below the select box */
+    font-size: 15px;
+    /* Adjust as needed */
+    font-weight: 580;
+    text-align: center;
+}
+
+#submitClass
+{
+    display: block;
+    /* Makes the button a block element */
+    width: 100%;
+    /* Makes the button take up the full width of its container */
+    padding: 10px;
+    /* Adds padding inside the button */
+    background-color: #da5151;
+    /* Sets the background color */
+    color: rgb(0, 0, 0);
+    /* Sets the text color */
+    border: none;
+    /* Removes the default border */
+    cursor: pointer;
+    /* Changes the cursor to a pointer when hovering over the button */
+    font-size: 19px;
+    /* Adjust as needed */
+    font-weight: 600;
+    text-align: center;
+    text-decoration: none;
+
+}
+
+#submitClass:hover
+{
+    background-color: #993e3e;
+    /* Changes the background color on hover */
+}

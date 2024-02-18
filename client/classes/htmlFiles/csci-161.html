@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Study Buddy</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+    <link rel="stylesheet" href="../cssFiles/csci-161.css">
+</head>
+<body>
+    <header>
+        <nav class="main-nav">
+            <ul>
+                <li><a href="/mainMenu">Home</a></li>
+                <li><a href="/myProfile">My Profile</a></li>
+                <li><a href="/myClasses">My Classes</a></li>
+                <li><a href="/myFriends">My Friends</a></li>
+                <li><a href="/login">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class = homePageImage></div>
+    <div class="content-container">
+        <div class="friends-column">
+            <h3>Friends Posts</h3>
+        </div>
+        <div class="discussion-column">
+            <h3>Main Class Thread</h3>
+            <button id="newPostButton">Add a Post</button>
+            <div id ="all-posts">
+                <!-- Posts from users will go here -->
+            </div>
+            <div class="post-form">
+                <input type="text" id="postTitle" placeholder="Enter post title here!">
+                <textarea id="postText" placeholder="Add new post here!"></textarea>
+                <br>
+                <label for="postImage" id="postImageLabel"></label>
+                <input type="file" id="postImage">
+                <br>
+                <button id="submitPostButton">Submit</button>
+            </div>
+        </div>
+        <div class="classmates-column">
+            <h3>Classmates List</h3>
+        </div>
+    </div>
+    <script src="../jsFiles/csci-161.js"></script> <!-- Links this HTML to the JavaScript file -->
+</body>
+</html>
+
+
+<!--Fetch most recent 15 Messages that are from different Users-->
+<!--For each Message, attach the users name and picture of their face-->

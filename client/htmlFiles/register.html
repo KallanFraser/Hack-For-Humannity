@@ -1,0 +1,81 @@
+<!-- client/register.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Study Buddy</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/css/select2.min.css"/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/js/select2.min.js"></script>
+    <link rel="stylesheet" href="../cssFiles/base.css">
+    <link rel="stylesheet" href="../cssFiles/register.css">
+</head>
+<body>
+    <canvas id="bg"></canvas>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="js/common.js"></script>
+    <header>
+        <div class="loading-page">
+            <!-- Logo and loading message -->
+            <div class="logo-container">
+                <img src="src/studyBuddyLogoDogOnly.png" alt="Your Logo" class="loading-logo">
+            </div>
+        </div>
+        <nav class="main-nav">
+            <ul>
+                <li><a href="/mainMenu"><img src="src/homeIcon.png" alt="Home"></a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="homePageImage"></div>
+
+    <div class="registerOverlay"> <!-- A container that wraps the login form, used for styling -->
+        <div class="registerContainer">
+                <!-- Centered Study Buddy Logo -->
+            <div class="centered-logo">
+                <img src="src/studyBuddyLogo.png" alt="Study Buddy Logo">
+            </div>
+            <h3>Grow your study network now</h3>
+            <h2>Sign Up</h2>
+            <form id="registerForm" class="registerForm" action="/registerUser" method="post">
+                <div class="formGroup">
+                    <label for="firstName">First Name:</label>
+                    <input type="text" id="firstName" name="firstName" required minlength="2" maxlength="20">
+                </div>
+                <div class="formGroup">
+                    <label for="lastName">Last Name:</label>
+                    <input type="text" id="lastName" name="lastName" required minlength="2" maxlength="20">
+                </div>
+                <div class="formGroup">
+                    <label for="email">Email:</label>
+                    <input type="text" id="email" name="email" required minlength="5" maxlength="40">
+                </div>
+                <div class="formGroup">
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="password" required minlength="5" maxlength="40">
+                </div>
+                <div class="formGroup">
+                    <label for="confirmPassword">Confirm Password:</label>
+                    <input type="password" id="confirmPassword" name="confirmPassword" required minlength="5" maxlength="40">
+                </div>
+                <div class="formGroup">
+                    <label for="graduationYear">Graduation Year:</label>
+                    <input type="number" id="graduationYear" name="graduationYear" required minlength="4" maxlength="4">
+                </div>
+                <div class="formGroup">
+                    <label for="major">Major:</label>
+                    <select id="major" name="major">
+                        <!-- Options will be dynamically added here via the js script found in registerPage.js-->
+                    </select>
+                </div>
+                <button type="submit">Register</button>
+            </form>
+            <div class="loginSection">
+                <a href="/login">Login</a>
+            </div>
+        </div>
+    </div>
+    <script src="../jsFiles/registerPage.js"></script>
+    <script src="jsFiles/scripts.js"></script>
+</body>
+</html>

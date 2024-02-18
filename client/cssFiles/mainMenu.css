@@ -1,0 +1,247 @@
+.homePageImage
+{
+    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgb(0, 0, 0)), url('../src/HomePageImage.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    width: 100%;
+    position: relative;
+}
+
+.sidebar
+{
+    position: fixed;
+    top: 50%;
+    transform: translate(0, -50%);
+    left: 0;
+    height: 80vh;
+    /* Adjust the height as needed */
+    width: 80px;
+    padding: 10px;
+    background: #c51f1f;
+    box-sizing: border-box;
+    z-index: 1;
+    overflow: hidden;
+    border-radius: 0 20px 20px 0;
+    transition: width 0.3s ease;
+}
+
+.sidebar:hover
+{
+    width: 250px;
+}
+
+.image-text
+{
+    display: flex;
+    align-items: center;
+}
+
+.image-text img
+{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.friend-item:hover
+{
+    filter: grayscale(0%) opacity(1);
+    background: var(--bg-secondary);
+    color: var(--text-secondary);
+}
+
+/* Simplify styles for text elements */
+.text.header-text,
+.friend-name,
+.friend-chat,
+.friend-time
+{
+    color: white;
+    transition: opacity 0.3s ease;
+    opacity: 0;
+    /* Hidden by default */
+}
+
+.sidebar:hover .text.header-text,
+.sidebar:hover .friend-name,
+.sidebar:hover .friend-chat,
+.sidebar:hover .friend-time
+{
+    opacity: 1;
+    /* Display when sidebar is hovered */
+}
+
+.friends-tab
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.menu
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.friend-list
+{
+    list-style: none;
+    padding: 0;
+    margin: 10px 0;
+}
+
+.friend-item
+{
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.friend-content
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+}
+
+.friend-image
+{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin-right: 10px;
+    object-fit: cover;
+}
+
+.friend-time
+{
+    margin-left: auto;
+    /* Align time to the right */
+}
+
+/* New style to hide text by default */
+.sidebar .text.header-text,
+.sidebar .friend-name,
+.sidebar .friend-chat,
+.sidebar .friend-time
+{
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.sidebar:hover .text.header-text,
+.sidebar:hover .friend-name,
+.sidebar:hover .friend-chat,
+.sidebar:hover .friend-time
+{
+    opacity: 1;
+    /* Display when sidebar is hovered */
+}
+
+.friend-item
+{
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+    /* Reduced margin */
+}
+
+.friend-details
+{
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    margin-top: 1px;
+    /* Reduced margin */
+}
+
+.sidebar:hover .friend-item
+{
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+.sidebar:hover .friend-content
+{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    /* Align items to the left */
+    color: white;
+}
+
+.sidebar:hover .friend-name
+{
+    font-weight: bold;
+    /* Make the name bold */
+    margin-bottom: 3px;
+    /* Add some space between name and chat */
+}
+
+.sidebar:hover .friend-details
+{
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* Put time all the way to the right */
+    width: 100%;
+    /* Make sure it takes the full width */
+}
+
+.logo-container
+{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    z-index: 2;
+}
+
+.logo-container .loading-logo
+{
+    width: 120px;
+    /* Or your preferred size */
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.home-page-text
+{
+    color: #fff;
+    font-size: 2rem;
+    font-weight: 300;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    margin-bottom: 30px;
+}
+
+.home-page-p
+{
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 300;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    margin-bottom: 30px;
+}
+
+@media (max-width: 768px)
+{
+    .home-page-text
+    {
+        font-size: 1.5rem;
+    }
+
+    .logo-container .loading-logo
+    {
+        width: 90px;
+    }
+}

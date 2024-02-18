@@ -1,0 +1,135 @@
+body
+{
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f2;
+}
+
+header
+{
+    background-color: #c51f1f;
+    color: white;
+    padding: 17px 0;
+}
+
+.main-nav ul
+{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+
+.main-nav li
+{
+    display: inline-block;
+    margin: 0 20px;
+}
+
+.main-nav a
+{
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    font-weight: 550;
+}
+
+.main-nav a:hover
+{
+    color: #813f3f;
+}
+
+.homePageImage
+{
+    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgb(0, 0, 0)), url('../src/HomePageImage.png');
+    background-size: cover;
+    /* Covers the entire container */
+    background-position: center;
+    /* Centers the background image */
+    background-repeat: no-repeat;
+    /* Disables repeating the image */
+    height: 100vh;
+    /* Set the height of the div */
+    width: 100%;
+    /* Set the width of the div */
+    position: relative;
+    /* Needed for the pseudo-element positioning */
+}
+
+.userProfileOverlay
+{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 40%;
+    height: 70%;
+    transform: translate(-50%, -50%);
+    padding: 30px;
+    background-color: rgba(255, 255, 255, 0.692);
+    border-radius: 5px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    z-index: 11;
+}
+
+.userProfileContainer
+{
+    height: 87%;
+    background-color: rgb(238, 201, 201);
+    background-image: url('../src/PalmTreesLogin.png');
+    background-size: cover;
+    background-position: center;
+    padding: 40px;
+    border-radius: 10px;
+    z-index: 11;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.profilePhoto
+{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 2px solid #ccc;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    margin-top: -130px;
+    margin-bottom: 20px;
+    /* Adjust the bottom margin to space out the image from the details */
+}
+
+#userProfile
+{
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    /* Stack items vertically */
+    align-items: center;
+    /* Center items horizontally */
+}
+
+#userProfile p,
+#userProfile h2
+{
+    text-align: center;
+    color: #ffffff;
+    text-decoration: none;
+    margin: 10px 0;
+    /* Add margin to space out the details */
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000, -2px 0 0 #000, 2px 0 0 #000, 0 -2px 0 #000, 0 2px 0 #000;
+}
+
+#userProfile h2
+{
+    font-size: 30px;
+}
+
+#userProfile p
+{
+    font-size: 20px;
+}

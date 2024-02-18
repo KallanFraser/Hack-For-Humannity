@@ -1,0 +1,42 @@
+[
+    {
+      "name": "Computer Science",
+      "value": "computerScience"
+    },
+    {
+      "name": "Mathematics",
+      "value": "mathematics"
+    },
+    {
+      "name": "Physics",
+      "value": "physics"
+    },
+    {
+      "name": "Chemistry",
+      "value": "chemistry"
+    },
+    {
+      "name": "Biology",
+      "value": "biology"
+    },
+    {
+      "name": "English Literature",
+      "value": "englishLiterature"
+    },
+    {
+      "name": "History",
+      "value": "history"
+    },
+    {
+      "name": "Philosophy",
+      "value": "philosophy"
+    },
+    {
+      "name": "Economics",
+      "value": "economics"
+    },
+    {
+      "name": "Psychology",
+      "value": "psychology"
+    }
+  ]

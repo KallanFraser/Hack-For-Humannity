@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Studdy Buddy</title>
+    <link rel="stylesheet" href="../cssFiles/base.css">
+    <link rel="stylesheet" href="../cssFiles/otherUsersProfile.css">
+</head>
+<body>
+    <header>
+        <nav class="main-nav">
+            <ul>
+                <li><a href="/mainMenu">Home</a></li>
+                <li><a href="/myProfile">My Profile</a></li>
+                <li><a href="/myClasses">My Classes</a></li>
+                <li><a href="/myFriends">My Friends</a></li>
+                <li><a href="/login">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class = homePageImage></div>
+    <div class = "userProfileOverlay">
+        <div class="userProfileContainer">
+            <img src="../loggedInUsersFiles/usersProfilePicture.png" alt="Profile Photo" class="profilePhoto">
+                <div id="userProfile" class="user-profile">
+                    <!-- User profile will be displayed here -->
+                </div>
+        </div>
+    </div>
+    <script src="../jsFiles/otherUsersProfile.js"></script> <!-- Links this HTML to the JavaScript file -->
+</body>
+</html>
+
+
+<!--Fetch most recent 15 Messages that are from different Users-->
+<!--For each Message, attach the users name and picture of their face-->

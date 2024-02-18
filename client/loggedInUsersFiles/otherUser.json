@@ -1,0 +1,14 @@
+{
+  "id": 5,
+  "firstName": "Chris",
+  "lastName": "Anderson",
+  "email": "canderson@scu.edu",
+  "password": "password",
+  "graduationYear": 2027,
+  "major": "Biology",
+  "class1": null,
+  "class2": null,
+  "class3": null,
+  "class4": null,
+  "class5": null
+}

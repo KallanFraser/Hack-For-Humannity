@@ -1,0 +1,236 @@
+.main-nav a
+{
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    font-weight: 550;
+    margin: 0 20px;
+    position: fixed;
+    top: 10px;
+    /* Adjust the top position as needed */
+    left: 49%;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+}
+
+.main-nav a img
+{
+    width: 40px;
+    /* Adjust the width as needed */
+    height: 40px;
+    /* Adjust the height as needed */
+    margin-right: 5px;
+    /* Adjust the margin as needed */
+}
+
+.main-nav a:not(:first-child)
+{
+    display: none;
+}
+
+.main-nav a:hover
+{
+    color: #813f3f;
+}
+
+.homePageImage
+{
+    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgb(0, 0, 0)), url('../src/HomePageImage.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    /* Change from relative to fixed */
+    top: 0;
+    /* Set top to 0 to cover the entire viewport */
+}
+
+
+.registerOverlay
+{
+    position: absolute;
+    top: 76%;
+    left: 50%;
+    width: 100%;
+    height: auto;
+    transform: translate(-50%, -50%);
+    max-width: 400px;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.75);
+    border-radius: 5px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    z-index: 11;
+    /* High z-index to ensure it's above other content */
+    overflow: hidden;
+    /* Hide the overflow to prevent white space */
+}
+
+.registerOverlay::before
+{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('../src/PalmTreesLogin.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: -1;
+    /* Behind the registration box */
+}
+
+.registerContainer
+{
+    background-color: rgb(238, 201, 201, 0.5);
+    background-image: url('../src/PalmTreesLogin.png');
+    /* Path to your image */
+    background-size: cover;
+    /* Cover the entire container with the image */
+    background-position: center;
+    /* Center the image */
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-bottom: 45px;
+    padding-top: 15px;
+    border-radius: 0px;
+    z-index: 11;
+}
+
+.registerContainer h2
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 25px;
+    padding: 1px;
+}
+
+.registerContainer h3
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 15px;
+    padding: 1px;
+}
+
+.registerForm
+{
+    display: flex;
+    flex-direction: column;
+    z-index: 11;
+}
+
+.formGroup
+{
+    margin-top: 6%;
+    margin-bottom: 1px;
+    margin-right: 45px;
+    margin-left: 20px;
+    /* Add some space between form groups */
+}
+
+.formGroup label
+{
+    display: block;
+    /* Make the label take the full width */
+    color: #000000;
+    /* Change the color of the label */
+    margin-bottom: 5px;
+    /* Add some space between the label and the input */
+    font-size: 15px;
+    font-weight: 510;
+}
+
+
+.formGroup input
+{
+    width: 100%;
+    /* Make the input take the full width of its parent */
+    padding: 10px;
+    /* Add some padding inside the input */
+    border: none;
+    /* Remove the default border */
+    border-radius: 5px;
+    /* Add rounded corners to the input */
+    background-color: #ffb1b1;
+    /* Change the background color of the input */
+    color: #000000;
+    /* Change the text color of the input */
+}
+
+button[type="submit"]
+{
+    margin-top: 20px;
+    /* Adjust the space above the button */
+    /* Other styles for the button */
+    width: 100%;
+    /* Make the button take the full width of its parent */
+    padding: 10px;
+    /* Add some padding inside the button */
+    border: none;
+    /* Remove the default border */
+    border-radius: 5px;
+    /* Add rounded corners to the button */
+    background-color: #c51f1f;
+    /* Change the background color of the button */
+    color: #f0f0f2;
+    /* Change the text color of the button */
+    font-size: 16px;
+    /* Increase the font size */
+    font-weight: 590;
+    cursor: pointer;
+    /* Change the cursor to a pointer when hovering over the button */
+    transition: background-color 0.3s ease;
+    /* Smooth transition for background color change */
+}
+
+.registerForm button[type="submit"]:hover
+{
+    background-color: #813f3f;
+    /* Change the background color when hovering */
+}
+
+.centered-logo
+{
+    text-align: center;
+    margin-top: 20px;
+    /* Adjust the margin as needed */
+}
+
+.centered-logo img
+{
+    width: 200px;
+    /* Adjust the width as needed */
+    height: 200px;
+    /* Adjust the height as needed */
+}
+
+.loginSection
+{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.loginSection a
+{
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 25px;
+    font-weight: 510;
+    text-shadow:
+        -1px -1px 0 #000,
+        1px -1px 0 #000,
+        -1px 1px 0 #000,
+        1px 1px 0 #000,
+        -2px 0 0 #000,
+        2px 0 0 #000,
+        0 -2px 0 #000,
+        0 2px 0 #000;
+}

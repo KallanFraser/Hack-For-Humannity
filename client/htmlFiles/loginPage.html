@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Main Menu</title>
+    <link rel="stylesheet" href="../cssFiles/base.css">
+    <link rel="stylesheet" href="../cssFiles/loginPage.css">
+</head>
+<body>
+    <canvas id="bg"></canvas>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="js/common.js"></script>
+    <header>
+        <div class="loading-page">
+            <!-- Logo and loading message -->
+            <div class="logo-container">
+                <img src="src/studyBuddyLogoDogOnly.png" alt="Your Logo" class="loading-logo">
+            </div>
+        </div>
+        <nav class="main-nav">
+            <ul>
+                <li><a href="/mainMenu"><img src="src/homeIcon.png" alt="Home"></a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="loginOverlay"> <!-- A container that wraps the login form, used for styling -->
+        <div class="loginContainer">
+                <!-- Centered Study Buddy Logo -->
+            <div class="centered-logo">
+                <img src="src/studyBuddyLogo.png" alt="Study Buddy Logo">
+            </div>
+
+            <form id="loginForm" class="loginForm" action="/loginUser" method="post">
+                <div class = "signInSection">
+                    <div class="formGroup"> <!-- Groups each label and input for styling and layout -->
+                        <label for="email">Email:</label> <!-- Email is what is displayed -->
+                        <input type="text" id="email" name="email" required minlength="5" maxlength="40">
+                    </div>
+                    <div class="formGroup">
+                        <label for="password">Password:</label> <!-- Password is what is displayed -->
+                        <input type="password" id="password" name="password" required minlength="5" maxlength="40">
+                    </div>
+                </div>
+                <button type="submit">Login</button> <!-- Button, when clicked, will submit the login form. Form data will be sent to the server -->
+                <div class="signUpSection">
+                    <a href="/register">Sign Up</a>
+                </div>
+            </form>
+        </div>
+    </div>
+        <div class="homePageImage"></div>
+    <script src="../jsFiles/loginPage.js"></script> <!-- Links this HTML to the JavaScript file -->
+    <script src="jsFiles/scripts.js"></script>
+</body>
+</html>

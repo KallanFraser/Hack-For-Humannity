@@ -1,0 +1,118 @@
+body
+{
+    font-family: 'Trebuchet MS', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f2;
+    cursor: src('src/studyBuddyLogoDogOnly.png'), auto;
+}
+
+header
+{
+    background-color: rgba(197, 31, 31, 0.8);
+    /* Slightly transparent red */
+    color: white;
+    padding: 17px 0;
+    z-index: 13;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    transition: background-color 0.5s ease;
+    /* Smooth transition effect */
+}
+
+.main-nav ul
+{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    z-index: 13;
+}
+
+.main-nav li
+{
+    display: inline-block;
+    margin: 0 20px;
+    z-index: 13;
+}
+
+.main-nav a
+{
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    font-weight: 550;
+    transition: color 0.3s ease;
+    /* Smooth color transition effect */
+    z-index: 13;
+}
+
+.main-nav a:hover
+{
+    color: #813f3f;
+    z-index: 13;
+}
+
+/* Add a shadow when the page is scrolled down */
+header.scrolled
+{
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.loading-page
+{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url('../src/HomePageImage.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: 999;
+    animation: fadeOutBackground 1.3s ease-in-out forwards;
+}
+
+.loading-logo
+{
+    width: 150px;
+    height: 150px;
+}
+
+.loaded
+{
+    animation: zoomAndFade 1s ease-in-out forwards, fadeOutBackground 1.5s ease-in-out forwards;
+}
+
+@keyframes zoomAndFade
+{
+    0%
+    {
+        transform: scale(1);
+        opacity: 1;
+    }
+
+    100%
+    {
+        transform: scale(3.2);
+        opacity: 0;
+    }
+}
+
+@keyframes fadeOutBackground
+{
+    0%
+    {
+        opacity: 1;
+    }
+
+    100%
+    {
+        opacity: 0;
+    }
+}

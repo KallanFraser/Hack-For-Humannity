@@ -1,0 +1,312 @@
+body
+{
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f2;
+}
+
+header
+{
+    background-color: #c51f1f;
+    color: white;
+    padding: 17px 0;
+}
+
+.main-nav ul
+{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+
+.main-nav li
+{
+    display: inline-block;
+    margin: 0 20px;
+}
+
+.main-nav a
+{
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    font-weight: 550;
+}
+
+.main-nav a:hover
+{
+    color: #813f3f;
+}
+
+.homePageImage
+{
+    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgb(0, 0, 0)), url('../src/HomePageImage.png');
+    background-size: cover;
+    /* Covers the entire container */
+    background-position: center;
+    /* Centers the background image */
+    background-repeat: no-repeat;
+    /* Disables repeating the image */
+    height: 100vh;
+    /* Set the height of the div */
+    width: 100%;
+    /* Set the width of the div */
+    position: relative;
+    /* Needed for the pseudo-element positioning */
+}
+
+
+.containers
+{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 95%;
+    height: 80%;
+    z-index: 11;
+    gap: 20px;
+}
+
+.acceptFriendRequestsColumn
+{
+    flex: 1;
+    margin: 10px;
+    background-color: rgba(226, 150, 150, 0.5);
+    padding: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow-y: hidden;
+    height: 85vh;
+    border-radius: 20px;
+    border: 5px solid #942828b4;
+    background-image: radial-gradient(circle, rgba(245, 242, 242, 0.068), rgba(8, 8, 8, 0.445));
+}
+
+.myFriendsColumn
+{
+    flex: 1;
+    margin: 10px;
+    background-color: rgba(226, 125, 125, 0.5);
+    padding: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow-y: hidden;
+    height: 85vh;
+    border-radius: 20px;
+    border: 5px solid #942828b4;
+    background-image: radial-gradient(circle, rgba(245, 242, 242, 0.068), rgba(8, 8, 8, 0.445));
+}
+
+.addFriendsColumn
+{
+    flex: 1;
+    margin: 10px;
+    background-color: rgba(226, 150, 150, 0.5);
+    padding: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow-y: hidden;
+    height: 85vh;
+    border-radius: 20px;
+    border: 5px solid #942828b4;
+    background-image: radial-gradient(circle, rgba(245, 242, 242, 0.068), rgba(8, 8, 8, 0.445));
+}
+
+.acceptFriendRequestsColumn h3
+{
+    text-align: center;
+    color: #ffffff;
+    font-size: 25px;
+    font-weight: 510;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000, -2px 0 0 #000, 2px 0 0 #000, 0 -2px 0 #000, 0 2px 0 #000;
+}
+
+.myFriendsColumn h3
+{
+    text-align: center;
+    color: #ffffff;
+    font-size: 25px;
+    font-weight: 510;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000, -2px 0 0 #000, 2px 0 0 #000, 0 -2px 0 #000, 0 2px 0 #000;
+}
+
+.addFriendsColumn h3
+{
+    text-align: center;
+    color: #ffffff;
+    font-size: 25px;
+    font-weight: 510;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000, -2px 0 0 #000, 2px 0 0 #000, 0 -2px 0 #000, 0 2px 0 #000;
+}
+
+.friendRequestcontent
+{
+    height: 670px;
+    overflow-y: auto;
+    background-image: radial-gradient(circle, rgba(245, 242, 242, 0.068), rgba(8, 8, 8, 0.445));
+    padding: 10px;
+    border-radius: 20px;
+}
+
+.friendscontent
+{
+    height: 670px;
+    overflow-y: auto;
+    background-image: radial-gradient(circle, rgba(245, 242, 242, 0.068), rgba(8, 8, 8, 0.445));
+    padding: 10px;
+    border-radius: 20px;
+}
+
+.addFriendscontent
+{
+    height: 670px;
+    overflow-y: auto;
+    background-image: radial-gradient(circle, rgba(245, 242, 242, 0.068), rgba(8, 8, 8, 0.445));
+    padding: 10px;
+    border-radius: 20px;
+}
+
+/* For the object of friend suggestion */
+.friend-suggestion-item
+{
+    display: flex;
+    align-items: center;
+    border-radius: 20px;
+    padding: 10px;
+    margin-top: -15px;
+    margin-bottom: 10px;
+    margin-left: -20px;
+    margin-right: 20px;
+    border: 3px solid #000000;
+    justify-content: space-between;
+    background-color: #943b3bb2;
+}
+
+.profile-circle
+{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: white;
+    margin-right: 10px;
+}
+
+.name-link
+{
+    flex-grow: 1;
+    font-size: 18px;
+    font-weight: 580;
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.hide-button
+{
+    background-color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hide-button:before
+{
+    content: '+';
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 0;
+    margin-right: 5px;
+}
+
+.hide-button:hover
+{
+    background-color: #e0e0e0;
+}
+
+/* For the objects of Accept friend Requests */
+.friend-request-item
+{
+    border: 3px solid #000000;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #943b3bb2;
+    border-radius: 20px;
+    padding: 10px;
+}
+
+.friend-request-item span
+{
+    font-size: 16px;
+    margin-right: 10px;
+}
+
+.accept-button
+{
+    background-color: #ffffff;
+    /* Green background */
+    color: rgb(0, 0, 0);
+    padding: 5px 10px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.accept-button:hover
+{
+    background-color: #45a049a9;
+    /* Darker green on hover */
+}
+
+.accept-button::after
+{
+    content: '✓';
+    /* Unicode check mark */
+    font-size: 16px;
+    font-weight: 600;
+    margin-left: 5px;
+}
+
+
+/* For the objects of My Friends */
+.friend-item
+{
+    border: 3px solid #000000;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #943b3bb2;
+    border-radius: 20px;
+    padding: 10px;
+}
+
+.profile-circle
+{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #ccc;
+    background-size: cover;
+    margin-right: 10px;
+}
+
+.name-link
+{
+    flex-grow: 1;
+    font-size: 18px;
+    font-weight: 580;
+    color: #ffffff;
+    text-decoration: none
+}

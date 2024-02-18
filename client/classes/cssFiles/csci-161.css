@@ -1,0 +1,412 @@
+body
+{
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f2;
+}
+
+header
+{
+    background-color: #c51f1f;
+    color: white;
+    padding: 17px 0;
+    position: relative;
+    z-index: 2;
+}
+
+.main-nav ul
+{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+
+.main-nav li
+{
+    display: inline-block;
+    margin: 0 20px;
+}
+
+.main-nav a
+{
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    font-weight: 550;
+}
+
+.main-nav a:hover
+{
+    color: #813f3f;
+}
+
+.homePageImage
+{
+    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgb(0, 0, 0)), url('../../src/HomePageImage.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    width: 100%;
+    position: relative;
+}
+
+/*Contains the css for each of the three containers*/
+.content-container
+{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 95%;
+    height: 80%;
+    z-index: 11;
+    gap: 20px;
+}
+
+.friends-column
+{
+    flex: 1;
+    margin: 10px;
+    background-color: rgba(226, 150, 150, 0.5);
+    padding: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+.classmates-column
+{
+    flex: 1;
+    margin: 10px;
+    background-color: rgba(226, 150, 150, 0.5);
+    padding: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+.discussion-column
+{
+    flex: 2;
+    margin: 10px;
+    background-color: rgba(252, 122, 122, 0.65);
+    padding: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow-y: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    height: 85vh;
+    overflow-x: hidden;
+}
+
+
+.discussion-column h3
+{
+    text-align: center;
+    color: #ffffff;
+    font-size: 25px;
+    font-weight: 510;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000, -2px 0 0 #000, 2px 0 0 #000, 0 -2px 0 #000, 0 2px 0 #000;
+}
+
+.classmates-column h3
+{
+    text-align: center;
+    color: #ffffff;
+    font-size: 25px;
+    font-weight: 510;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000, -2px 0 0 #000, 2px 0 0 #000, 0 -2px 0 #000, 0 2px 0 #000;
+}
+
+.friends-column h3
+{
+    text-align: center;
+    color: #ffffff;
+    font-size: 25px;
+    font-weight: 510;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000, -2px 0 0 #000, 2px 0 0 #000, 0 -2px 0 #000, 0 2px 0 #000;
+}
+
+/* Section for Add a Post Button at the top of the page */
+#newPostButton
+{
+    padding: 10px 20px;
+    border: 2px solid #fad8d8;
+    border-radius: 6px;
+    background-color: #c93d3d;
+    color: white;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    margin-top: -20px;
+    text-shadow: 1px 1px 0 hsl(0, 0%, 0%), -1px -1px 0 hsl(0, 0%, 0%), 1px -1px 0 hsl(0, 0%, 0%), -1px 1px 0 hsl(0, 0%, 0%);
+}
+
+#newPostButton:hover
+{
+    background-color: #a63d3d;
+    border-color: #ffffff;
+}
+
+#all-posts
+{
+    overflow-y: auto;
+    flex-grow: 1;
+    margin-bottom: 10px;
+    max-height: 490px;
+    background-image: radial-gradient(circle, rgba(245, 242, 242, 0.068), rgba(8, 8, 8, 0.445));
+    border: 8px solid rgba(0, 0, 0, 0.822);
+    border-radius: 10px;
+    padding: 10px;
+    margin: 10px;
+    width: 95%;
+    /* Set the width to take up almost all of the container's width */
+    position: relative;
+    top: 10px;
+}
+
+.post-form
+{
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.post-form input[type="text"]
+{
+    width: 90%;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: 1px solid #f7f7f7;
+    font-size: 16px;
+    font-weight: 510;
+    padding: 5px;
+}
+
+.post-form textarea
+{
+    padding: 10px;
+    width: 88%;
+    border-radius: 5px;
+    border: 1px solid #f7f7f7;
+    resize: none;
+    overflow-y: auto;
+    font-size: 16px;
+    font-weight: 510;
+    margin-bottom: 7px;
+}
+
+.post-form input[type="file"]
+{
+    margin-top: 10px;
+    font-size: 16px;
+}
+
+.post-form button:hover
+{
+    background-color: #a63d3d;
+}
+
+/* Style for Select Image Button */
+#postImageLabel
+{
+    padding: 10px 20px;
+    border: 2px solid #fad8d8;
+    border-radius: 6px;
+    background-color: #c93d3d;
+    color: white;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s, border-color 0.3s;
+    text-shadow: 1px 1px 0 hsl(0, 0%, 0%), -1px -1px 0 hsl(0, 0%, 0%), 1px -1px 0 hsl(0, 0%, 0%), -1px 1px 0 hsl(0, 0%, 0%);
+    margin-bottom: 7px;
+
+}
+
+#postImageLabel:hover
+{
+    background-color: #a63d3d;
+}
+
+#postImageLabel::after
+{
+    content: 'Select Image';
+}
+
+#postImageLabel:hover::after
+{
+    content: 'Choose a File';
+}
+
+/* Style for the Submit New Post Button */
+#submitPostButton
+{
+    padding: 10px 20px;
+    position: relative;
+    border: 2px solid #fad8d8;
+    border-radius: 6px;
+    background-color: #c93d3d;
+    color: white;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s, border-color 0.3s;
+    text-shadow: 1px 1px 0 hsl(0, 0%, 0%), -1px -1px 0 hsl(0, 0%, 0%), 1px -1px 0 hsl(0, 0%, 0%), -1px 1px 0 hsl(0, 0%, 0%);
+
+}
+
+#submitPostButton:hover
+{
+    background-color: #a63d3d;
+}
+
+input[type="file"]
+{
+    opacity: 0;
+    width: 0.1px;
+    height: 0.1px;
+    position: absolute;
+}
+
+input[type="file"]+label
+{
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #c51f1f;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+input[type="file"]+label:hover
+{
+    background-color: #a63d3d;
+}
+
+.post
+{
+    background-color: rgba(177, 85, 85, 0);
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0);
+    padding: 15px;
+    margin-bottom: 15px;
+}
+
+.post-content
+{
+    background-color: #ffffffbe;
+    border: 5px solid #ffffff;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    padding-bottom: 0px;
+}
+
+.post h2
+{
+    font-size: 20px;
+    color: #333333;
+    margin-bottom: 10px;
+    text-decoration: underline;
+}
+
+.post p
+{
+    padding-inline: 10px;
+    font-size: 16px;
+    color: #2e2e2e;
+}
+
+.post p small
+{
+    text-align: right;
+    font-size: 12px;
+    color: #999999;
+}
+
+/* Style for the reply button to a post */
+.reply-button
+{
+    position: relative;
+    top: 10px;
+    padding: 10px 20px;
+    border: 2px solid #fad8d8;
+    border-radius: 6px;
+    background-color: #c93d3d;
+    color: white;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    margin-top: -25px;
+    margin-bottom: 10px;
+    transition: background-color 0.3s, border-color 0.3s;
+    text-shadow: 1px 1px 0 hsl(0, 0%, 0%), -1px -1px 0 hsl(0, 0%, 0%), 1px -1px 0 hsl(0, 0%, 0%), -1px 1px 0 hsl(0, 0%, 0%);
+
+}
+
+.reply-button:hover
+{
+    background-color: #a63d3d;
+}
+
+.reply-form
+{
+    margin-top: 10px;
+    display: none;
+}
+
+.reply-form textarea
+{
+    width: 95%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #cccccca1;
+    resize: vertical;
+}
+
+/* Style for the submit reply button */
+.submit-reply
+{
+    position: relative;
+    padding: 8px 18px;
+    border: 2px solid #fad8d8;
+    border-radius: 6px;
+    background-color: #c93d3d;
+    color: white;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s, border-color 0.3s;
+    text-shadow: 1px 1px 0 hsl(0, 0%, 0%), -1px -1px 0 hsl(0, 0%, 0%), 1px -1px 0 hsl(0, 0%, 0%), -1px 1px 0 hsl(0, 0%, 0%);
+}
+
+.submit-reply:hover
+{
+    background-color: #a63d3d;
+}
+
+/* Style for the reply container containg replys we import */
+.reply
+{
+    margin-left: 20px;
+    padding-left: 10px;
+    padding-top: 1px;
+    background-color: rgba(212, 179, 179, 0.562);
+    border-radius: 5px;
+    border: 2px solid #030000;
+    margin-bottom: 10px;
+}
