@@ -13,7 +13,7 @@ StudyBuddy is a web development project created during the Hack for Humanity 202
 - [Kallan Fraser](https://github.com/KallanFraser)
 - [Jared Griffith](https://github.com/jaredgriffith6)
 
-## Demo
+## Demo Video
 
 - [StudyBuddy Demo](https://www.youtube.com/watch?v=d15Kd2GaK_U)
 
